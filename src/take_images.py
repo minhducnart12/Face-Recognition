@@ -19,6 +19,7 @@ def parse_arguments(argv):
     return ap.parse_args(argv)
 
 def main():
+    
     # Load ArcFace Model
     parsed_args = parse_arguments(sys.argv[1:])
     source = parsed_args.source

@@ -17,6 +17,7 @@ def parse_arguments(argv):
 
 
 def main():
+    
     # Load ArcFace Model
     parsed_args = parse_arguments(sys.argv[1:])
     path_to_dir = parsed_args.dataset

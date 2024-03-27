@@ -18,6 +18,7 @@ def parse_arguments(argv):
 def main():
     # Load ArcFace Model
     parsed_args = parse_arguments(sys.argv[1:])
+
     path_to_dir = parsed_args.dataset
     model = ArcFace.loadModel()
     model.load_weights("../Models/arcface_weights.h5")
