@@ -34,7 +34,7 @@ def main():
     y_pred = svm_model.predict(x_test)
     cm = confusion_matrix(y_test, y_pred)
 
-    # Vẽ ma trận nhầm lẫn bằng seaborn
+    # Draw confusion matrix
     plt.figure(figsize=(8, 6))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
     plt.xlabel('Predicted labels')
