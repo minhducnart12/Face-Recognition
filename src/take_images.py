@@ -11,7 +11,7 @@ def parse_arguments(argv):
                     help="name of the person")
     ap.add_argument("-o", "--save", type=str, default='../Datasets/Pictures/Raw',
                     help="path to save dir")
-    ap.add_argument("-c", "--conf", type=float, default=0.5,
+    ap.add_argument("-c", "--conf", type=float, default=0.8,
                     help="min prediction conf (0<conf<1)")
     ap.add_argument("-x", "--number", type=int, default=100,
                     help="number of data wants to collect")

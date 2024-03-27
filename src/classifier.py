@@ -7,6 +7,10 @@ import pickle
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import seaborn as sns
+
 
 def main():
     pickle_file_path = "../Models/EncodeFile.pkl"
@@ -28,6 +32,15 @@ def main():
     svm_model.fit(x_train, y_train)
 
     y_pred = svm_model.predict(x_test)
+    cm = confusion_matrix(y_test, y_pred)
+
+    # Vẽ ma trận nhầm lẫn bằng seaborn
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+    plt.xlabel('Predicted labels')
+    plt.ylabel('True labels')
+    plt.title('Confusion Matrix')
+    plt.show()
 
     accuracy = accuracy_score(y_test, y_pred)
 
