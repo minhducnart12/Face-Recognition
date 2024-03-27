@@ -26,7 +26,7 @@ def loadModel(url = 'https://github.com/serengil/deepface_models/releases/downlo
 
 	#---------------------------------------
 	#check the availability of pre-trained weights
-	output = 'Models/arcface_weights.h5'
+	output = '../Models/arcface_weights.h5'
 	if os.path.isfile(output) == False:
 		print("arcface_weights: will be downloaded to ",output)
 		gdown.download(url, output, quiet=False)
