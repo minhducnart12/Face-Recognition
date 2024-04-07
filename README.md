@@ -14,6 +14,7 @@ pip3 install -r requirements.txt
 ```
 ```
 cd src
+```
 ### 1.Collect Data using Web-cam or RTSP
 
 <details>
